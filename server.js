@@ -39,7 +39,7 @@ const ShirtsSchema = new mongoose.Schema({
   imgTshirt: String,
   upperText: String,
   lowerText: String,
-  textsize: String,
+  textsize: Number,
   textcolor: String
 });
 
@@ -82,7 +82,7 @@ app.post("/shirts", async (req, res) => {
   }
 });
 
-// Shirts CREATE ROUTE
+// Shirts update ROUTE
 app.put("/shirts/:id", async (req, res) => {
   try {
     // send all people
